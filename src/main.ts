@@ -19,5 +19,5 @@ app.listen(port, () => {
 	console.log("-----------------------");
 	console.log(`http://${host}:${port}/`);
 	console.log("-----------------------");
-	console.log(`For get users: http://${host}:${port}/users`);
+	console.log(`For getting users: http://${host}:${port}/users`);
 });

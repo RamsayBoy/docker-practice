@@ -1,12 +1,12 @@
 {
-  "name": "api",
+  "name": "api4practice",
   "version": "1.0.0",
-  "description": "Practicing Docker",
+  "description": "An API for practicing Docker and other things.",
   "main": "main.js",
   "scripts": {
-    "build::dev": "tsc",
-    "start::dev": "nodemon src/main.ts",
-    "start::pro": "node dist/main.js",
+		"build": "tsc",
+		"start:dev": "nodemon src/main.ts",
+    "start:pro": "NODE_ENV node dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

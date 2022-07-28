@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
 		"build": "tsc",
+		"docker:build": "docker build -t $npm_package_name .",
 		"start:dev": "nodemon src/main.ts",
     "start:pro": "NODE_ENV node dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"

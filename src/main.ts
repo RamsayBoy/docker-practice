@@ -16,8 +16,8 @@ app.get("/users", async (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-	console.log("-----------------------");
+	console.log("-----------------------------------------------");
 	console.log(`http://${host}:${port}/`);
-	console.log("-----------------------");
+	console.log("-----------------------------------------------");
 	console.log(`For getting users: http://${host}:${port}/users`);
 });

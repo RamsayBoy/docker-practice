@@ -4,6 +4,5 @@ COPY package*.json ./
 COPY ./dist .
 COPY ./prisma ./prisma
 RUN npm ci
-RUN npx prisma generate
-CMD [ "node", "main.js" ]
+CMD npx prisma migrate dev && node main.js
 EXPOSE 8080

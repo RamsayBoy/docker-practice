@@ -1,0 +1,33 @@
+services:
+  api:
+    depends_on:
+      - database
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: api4practice
+    ports:
+      - 3000:3000
+    environment:
+      PORT: 3000
+      HOST: localhost
+      # Instead of localhost, database service name has to be used instead
+      # DATABASE_URL: mysql://newuser:root1234@database:3306/trying_prisma_db
+      DATABASE_URL: mysql://root:root1234@database:3306/trying_prisma_db
+  database:
+    image: mysql
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root1234
+      # Commented because newuser has no grants for the migrations
+      # MYSQL_USER: newuser # There was an error because it cannot be root
+      # MYSQL_PASSWORD: root1234
+      MYSQL_HOST: localhost
+      MYSQL_DATABASE: trying_prisma_db
+  #   volumes:
+  #     - mysql-data:/var/mysql/data
+# This is the way of define the volumes before using them
+# volumes:
+#   mysql-data:

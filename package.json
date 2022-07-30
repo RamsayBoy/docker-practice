@@ -6,8 +6,7 @@
   "scripts": {
 		"build": "tsc",
 		"docker:build": "docker build -t $npm_package_name .",
-		"start:dev": "nodemon src/main.ts",
-    "start:pro": "NODE_ENV node dist/main.js",
+		"dev": "nodemon src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -14,6 +14,7 @@ services:
       # Instead of localhost, database service name has to be used instead
       # DATABASE_URL: mysql://newuser:root1234@database:3306/trying_prisma_db
       DATABASE_URL: mysql://root:root1234@database:3306/trying_prisma_db
+    restart: always
   database:
     image: mysql
     container_name: mysql
